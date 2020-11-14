@@ -10,7 +10,7 @@ images = [
 ]
 # build the dev branch which generates the next tag
 builder = dsutil.docker.DockerImageBuilder(images)
-builder.build(no_cache="dclong/ubuntu_b")
+builder.build()
 # build the master branch which generates the latest tag
 builder = dsutil.docker.DockerImageBuilder(images, branch="master")
 builder.build()
@@ -18,4 +18,4 @@ builder.build()
 # build a debian tag for docker-jupyterhub-ds
 images = ["https://github.com/dclong/docker-jupyterhub-ds.git"]
 builder = dsutil.docker.DockerImageBuilder(images, branch="debian")
-builder.build(no_cache="dclong/ubuntu_b")
+builder.build()
