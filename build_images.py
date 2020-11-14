@@ -15,7 +15,7 @@ builder.build()
 builder = dsutil.docker.DockerImageBuilder(images, branch="master")
 builder.build()
 
-# build a debian tag for docker-jupyterhub-ds
+# build a debian tag for docker-jupyterhub-ds which use debian:testing as the base image
 images = ["https://github.com/dclong/docker-jupyterhub-ds.git"]
 builder = dsutil.docker.DockerImageBuilder(images, branch="debian")
 builder.build()
