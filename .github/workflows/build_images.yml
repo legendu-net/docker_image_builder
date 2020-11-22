@@ -14,7 +14,7 @@ jobs:
           python-version: 3.7
       - name: Install dsutil
         run: |
-          pip3 install -U git+https://github.com/dclong/xinstall@master
+          pip3 install -U git+https://github.com/dclong/xinstall@main
           xinstall dsutil -ic
       - name: Login to DockerHub
         uses: docker/login-action@v1
