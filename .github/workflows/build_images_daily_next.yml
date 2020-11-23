@@ -1,9 +1,9 @@
-name: Build Docker Images Daily
+name: Build Docker Images Daily - Next
 on:
   schedule:
     - cron: '0 9 * * *'
 jobs:
-  build_docker_images_daily:
+  build_docker_images_daily_next:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
