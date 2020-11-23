@@ -1,0 +1,27 @@
+name: Build Docker Images Daily
+on:
+  schedule:
+    - cron: '0 9 * * *'
+jobs:
+  build_docker_images_daily:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+      - name: Install dsutil
+        run: |
+          pip3 install -U git+https://github.com/dclong/xinstall@main
+          xinstall dsutil -ic
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build Docker Images
+        run: |
+          df -lh
+          ./build_images_next.py
+          df -lh

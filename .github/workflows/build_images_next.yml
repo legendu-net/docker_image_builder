@@ -23,4 +23,6 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build Docker Images
         run: |
-          ./build_images.py
+          df -lh
+          ./build_images_next.py
+          df -lh
