@@ -1,9 +1,9 @@
-name: Build Docker Images Daily
+name: Build Docker Images Daily - Debian
 on:
   schedule:
     - cron: '0 9 * * *'
 jobs:
-  build_docker_images_daily:
+  build_docker_images_daily_debian:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
