@@ -6,5 +6,5 @@ images = [
     "https://github.com/dclong/docker-vscode-server.git",
     "https://github.com/dclong/docker-rustpython.git",
 ]
-builder = dsutil.docker.DockerImageBuilder(images, branch="debian_unstable")
+builder = dsutil.docker.DockerImageBuilder(images, branch="debian")
 builder.build()
