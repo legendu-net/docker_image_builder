@@ -6,7 +6,6 @@ images = [
     "https://github.com/dclong/docker-gitpod.git",
     "https://github.com/dclong/docker-jupyterhub-julia.git",
     "https://github.com/dclong/docker-jupyterhub-pytorch.git",
-    "https://github.com/dclong/docker-jupyterhub-ai.git",
 ]
 # build the dev branch which generates the next tag
 builder = dsutil.docker.DockerImageBuilder(images)
