@@ -7,7 +7,6 @@ images = [
     "https://github.com/dclong/docker-gitpod.git",
     "https://github.com/dclong/docker-jupyterhub-julia.git",
     "https://github.com/dclong/docker-jupyterhub-pytorch.git",
-    "https://github.com/dclong/docker-jupyterhub-ai.git",
 ]
 # build the master branch which generates the latest tag
 builder = dsutil.docker.DockerImageBuilder(images, branch="master")
