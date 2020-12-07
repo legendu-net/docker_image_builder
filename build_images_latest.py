@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import dsutil
+import dsutil.docker
 
 images = [
     "https://github.com/dclong/docker-python-portable.git",
