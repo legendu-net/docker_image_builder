@@ -9,5 +9,5 @@ images = [
     "https://github.com/dclong/docker-jupyterhub-pytorch.git",
 ]
 # build the master branch which generates the latest tag
-builder = dsutil.docker.DockerImageBuilder(images, branch="master")
+builder = dsutil.docker.DockerImageBuilder(images, branch="main")
 builder.build()
