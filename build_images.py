@@ -19,3 +19,4 @@ branch_urls = {
 }
 builder = dsutil.docker.DockerImageBuilder(branch_urls)
 builder.build_images(remove=True)
+builder.save_graph()
