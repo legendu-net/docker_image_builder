@@ -1,0 +1,102 @@
+nodes:
+  dclong/docker-ubuntu_b<main>: ['dev']
+  dclong/docker-python-portable<main>: ['dev']
+  dclong/docker-python<main>: ['dev']
+  dclong/docker-python-nodejs<main>: ['dev']
+  dclong/docker-jupyterlab<main>: ['dev']
+  dclong/docker-jupyterhub<main>: ['dev']
+  dclong/docker-jupyterhub-jdk<main>: ['dev']
+  dclong/docker-jupyterhub-more<main>: []
+  dclong/docker-vscode-server<main>: []
+  dclong/docker-jupyterhub-ds<main>: []
+  dclong/docker-gitpod<main>: []
+  dclong/docker-jupyterhub-julia<main>: ['dev']
+  dclong/docker-jupyterhub-cuda<main>: ['dev']
+  dclong/docker-jupyterhub-cuda_b<main>: ['dev']
+  dclong/docker-jupyterhub-pytorch<main>: ['dev']
+  dclong/docker-jupyterhub-more<dev>: []
+  dclong/docker-vscode-server<dev>: []
+  dclong/docker-jupyterhub-ds<dev>: []
+  dclong/docker-gitpod<dev>: []
+  dclong/docker-ubuntu_b<debian>: []
+  dclong/docker-python<debian>: []
+  dclong/docker-python-nodejs<debian>: []
+  dclong/docker-jupyterlab<debian>: []
+  dclong/docker-jupyterhub<debian>: []
+  dclong/docker-jupyterhub-jdk<debian>: []
+  dclong/docker-jupyterhub-more<debian>: []
+  dclong/docker-jupyterhub-ds<debian>: []
+  dclong/docker-vscode-server<debian>: []
+  dclong/docker-rust<debian>: []
+  dclong/docker-rustpython<debian>: []
+edges:
+  - dclong/docker-ubuntu_b<main> -> dclong/docker-python-portable<main>
+  - dclong/docker-ubuntu_b<main> -> dclong/docker-python<main>
+  - dclong/docker-python<main> -> dclong/docker-python-nodejs<main>
+  - dclong/docker-python-nodejs<main> -> dclong/docker-jupyterlab<main>
+  - dclong/docker-jupyterlab<main> -> dclong/docker-jupyterhub<main>
+  - dclong/docker-jupyterhub<main> -> dclong/docker-jupyterhub-jdk<main>
+  - dclong/docker-jupyterhub<main> -> dclong/docker-jupyterhub-julia<main>
+  - dclong/docker-jupyterhub<main> -> dclong/docker-jupyterhub-cuda<main>
+  - dclong/docker-jupyterhub-jdk<main> -> dclong/docker-jupyterhub-more<main>
+  - dclong/docker-jupyterhub-jdk<main> -> dclong/docker-jupyterhub-more<dev>
+  - dclong/docker-jupyterhub-more<main> -> dclong/docker-vscode-server<main>
+  - dclong/docker-jupyterhub-more<main> -> dclong/docker-jupyterhub-ds<main>
+  - dclong/docker-jupyterhub-ds<main> -> dclong/docker-gitpod<main>
+  - dclong/docker-jupyterhub-cuda<main> -> dclong/docker-jupyterhub-cuda_b<main>
+  - dclong/docker-jupyterhub-cuda_b<main> -> dclong/docker-jupyterhub-pytorch<main>
+  - dclong/docker-jupyterhub-more<dev> -> dclong/docker-vscode-server<dev>
+  - dclong/docker-jupyterhub-more<dev> -> dclong/docker-jupyterhub-ds<dev>
+  - dclong/docker-jupyterhub-ds<dev> -> dclong/docker-gitpod<dev>
+  - dclong/docker-ubuntu_b<debian> -> dclong/docker-python<debian>
+  - dclong/docker-ubuntu_b<debian> -> dclong/docker-rust<debian>
+  - dclong/docker-python<debian> -> dclong/docker-python-nodejs<debian>
+  - dclong/docker-python-nodejs<debian> -> dclong/docker-jupyterlab<debian>
+  - dclong/docker-jupyterlab<debian> -> dclong/docker-jupyterhub<debian>
+  - dclong/docker-jupyterhub<debian> -> dclong/docker-jupyterhub-jdk<debian>
+  - dclong/docker-jupyterhub-jdk<debian> -> dclong/docker-jupyterhub-more<debian>
+  - dclong/docker-jupyterhub-more<debian> -> dclong/docker-jupyterhub-ds<debian>
+  - dclong/docker-jupyterhub-more<debian> -> dclong/docker-vscode-server<debian>
+  - dclong/docker-rust<debian> -> dclong/docker-rustpython<debian>
+repos:
+  https://github.com/dclong/docker-ubuntu_b.git:
+    - dclong/docker-ubuntu_b<main>
+    - dclong/docker-ubuntu_b<debian>
+  https://github.com/dclong/docker-python-portable.git:
+    - dclong/docker-python-portable<main>
+  https://github.com/dclong/docker-python.git:
+    - dclong/docker-python<main>
+  https://github.com/dclong/docker-python-nodejs.git:
+    - dclong/docker-python-nodejs<main>
+  https://github.com/dclong/docker-jupyterlab.git:
+    - dclong/docker-jupyterlab<main>
+  https://github.com/dclong/docker-jupyterhub.git:
+    - dclong/docker-jupyterhub<main>
+  https://github.com/dclong/docker-jupyterhub-jdk.git:
+    - dclong/docker-jupyterhub-jdk<main>
+    - dclong/docker-jupyterhub-jdk<debian>
+  https://github.com/dclong/docker-jupyterhub-more.git:
+    - dclong/docker-jupyterhub-more<main>
+    - dclong/docker-jupyterhub-more<dev>
+    - dclong/docker-jupyterhub-more<debian>
+  https://github.com/dclong/docker-vscode-server.git:
+    - dclong/docker-vscode-server<main>
+    - dclong/docker-vscode-server<dev>
+    - dclong/docker-vscode-server<debian>
+  https://github.com/dclong/docker-jupyterhub-ds.git:
+    - dclong/docker-jupyterhub-ds<main>
+    - dclong/docker-jupyterhub-ds<debian>
+  https://github.com/dclong/docker-gitpod.git:
+    - dclong/docker-gitpod<main>
+  https://github.com/dclong/docker-jupyterhub-julia.git:
+    - dclong/docker-jupyterhub-julia<main>
+  https://github.com/dclong/docker-jupyterhub-cuda.git:
+    - dclong/docker-jupyterhub-cuda<main>
+  https://github.com/dclong/docker-jupyterhub-cuda_b.git:
+    - dclong/docker-jupyterhub-cuda_b<main>
+  https://github.com/dclong/docker-jupyterhub-pytorch.git:
+    - dclong/docker-jupyterhub-pytorch<main>
+  https://github.com/dclong/docker-rust.git:
+    - dclong/docker-rust<debian>
+  https://github.com/dclong/docker-rustpython.git:
+    - dclong/docker-rustpython<debian>
