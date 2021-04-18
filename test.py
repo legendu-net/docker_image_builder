@@ -4,6 +4,7 @@ import dsutil.docker
 
 repos = [
     "https://github.com/dclong/docker-python-portable.git",
+    "https://github.com/dclong/docker-pypy.git",
     "https://github.com/dclong/docker-vscode-server.git",
     "https://github.com/dclong/docker-gitpod.git",
     "https://github.com/dclong/docker-jupyterhub-julia.git",
