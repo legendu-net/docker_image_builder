@@ -11,7 +11,7 @@ repos = [
     #"https://github.com/dclong/docker-pypy.git",
 ]
 branch_urls = {
-    "main": repos,
+    #"main": repos,
     "dev": repos,
     "debian": [
         #"https://github.com/dclong/docker-jupyterhub-ds.git",
