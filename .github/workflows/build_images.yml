@@ -24,6 +24,8 @@ jobs:
       - name: Build Docker Images
         run: |
           df -lh
+          docker ps
           ./build_images.py
           cat graph.yaml
+          docker ps
           df -lh
