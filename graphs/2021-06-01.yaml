@@ -1,0 +1,113 @@
+nodes:
+  dclong/docker-ubuntu_b<main>: []
+  dclong/docker-python-portable<main>: []
+  dclong/docker-pypy<main>: []
+  dclong/docker-python<main>: []
+  dclong/docker-python-nodejs<main>: []
+  dclong/docker-jupyterlab<main>: []
+  dclong/docker-jupyterhub<main>: []
+  dclong/docker-jupyterhub-jdk<main>: []
+  dclong/docker-jupyterhub-more<main>: []
+  dclong/docker-vscode-server<main>: []
+  dclong/docker-jupyterhub-ds<main>: []
+  dclong/docker-gitpod<main>: []
+  dclong/docker-jupyterhub-julia<main>: []
+  dclong/docker-jupyterhub-cuda<main>: []
+  dclong/docker-jupyterhub-cuda_b<main>: []
+  dclong/docker-jupyterhub-pytorch<main>: []
+  dclong/docker-ubuntu_b<dev>: []
+  dclong/docker-python-portable<dev>: []
+  dclong/docker-pypy<dev>: []
+  dclong/docker-python<dev>: []
+  dclong/docker-python-nodejs<dev>: []
+  dclong/docker-jupyterlab<dev>: []
+  dclong/docker-jupyterhub<dev>: []
+  dclong/docker-jupyterhub-jdk<dev>: []
+  dclong/docker-jupyterhub-more<dev>: []
+  dclong/docker-vscode-server<dev>: []
+  dclong/docker-jupyterhub-ds<dev>: []
+  dclong/docker-gitpod<dev>: []
+  dclong/docker-jupyterhub-julia<dev>: []
+  dclong/docker-jupyterhub-cuda<dev>: []
+  dclong/docker-jupyterhub-cuda_b<dev>: []
+  dclong/docker-jupyterhub-pytorch<dev>: []
+edges:
+  - dclong/docker-ubuntu_b<main> -> dclong/docker-python-portable<main>
+  - dclong/docker-ubuntu_b<main> -> dclong/docker-pypy<main>
+  - dclong/docker-ubuntu_b<main> -> dclong/docker-python<main>
+  - dclong/docker-python<main> -> dclong/docker-python-nodejs<main>
+  - dclong/docker-python-nodejs<main> -> dclong/docker-jupyterlab<main>
+  - dclong/docker-jupyterlab<main> -> dclong/docker-jupyterhub<main>
+  - dclong/docker-jupyterhub<main> -> dclong/docker-jupyterhub-jdk<main>
+  - dclong/docker-jupyterhub<main> -> dclong/docker-jupyterhub-julia<main>
+  - dclong/docker-jupyterhub<main> -> dclong/docker-jupyterhub-cuda<main>
+  - dclong/docker-jupyterhub-jdk<main> -> dclong/docker-jupyterhub-more<main>
+  - dclong/docker-jupyterhub-more<main> -> dclong/docker-vscode-server<main>
+  - dclong/docker-jupyterhub-more<main> -> dclong/docker-jupyterhub-ds<main>
+  - dclong/docker-jupyterhub-ds<main> -> dclong/docker-gitpod<main>
+  - dclong/docker-jupyterhub-cuda<main> -> dclong/docker-jupyterhub-cuda_b<main>
+  - dclong/docker-jupyterhub-cuda_b<main> -> dclong/docker-jupyterhub-pytorch<main>
+  - dclong/docker-ubuntu_b<dev> -> dclong/docker-python-portable<dev>
+  - dclong/docker-ubuntu_b<dev> -> dclong/docker-pypy<dev>
+  - dclong/docker-ubuntu_b<dev> -> dclong/docker-python<dev>
+  - dclong/docker-python<dev> -> dclong/docker-python-nodejs<dev>
+  - dclong/docker-python-nodejs<dev> -> dclong/docker-jupyterlab<dev>
+  - dclong/docker-jupyterlab<dev> -> dclong/docker-jupyterhub<dev>
+  - dclong/docker-jupyterhub<dev> -> dclong/docker-jupyterhub-jdk<dev>
+  - dclong/docker-jupyterhub<dev> -> dclong/docker-jupyterhub-julia<dev>
+  - dclong/docker-jupyterhub<dev> -> dclong/docker-jupyterhub-cuda<dev>
+  - dclong/docker-jupyterhub-jdk<dev> -> dclong/docker-jupyterhub-more<dev>
+  - dclong/docker-jupyterhub-more<dev> -> dclong/docker-vscode-server<dev>
+  - dclong/docker-jupyterhub-more<dev> -> dclong/docker-jupyterhub-ds<dev>
+  - dclong/docker-jupyterhub-ds<dev> -> dclong/docker-gitpod<dev>
+  - dclong/docker-jupyterhub-cuda<dev> -> dclong/docker-jupyterhub-cuda_b<dev>
+  - dclong/docker-jupyterhub-cuda_b<dev> -> dclong/docker-jupyterhub-pytorch<dev>
+repos:
+  https://github.com/dclong/docker-ubuntu_b:
+    - dclong/docker-ubuntu_b<main>
+    - dclong/docker-ubuntu_b<dev>
+  https://github.com/dclong/docker-python-portable:
+    - dclong/docker-python-portable<main>
+    - dclong/docker-python-portable<dev>
+  https://github.com/dclong/docker-pypy:
+    - dclong/docker-pypy<main>
+    - dclong/docker-pypy<dev>
+  https://github.com/dclong/docker-python:
+    - dclong/docker-python<main>
+    - dclong/docker-python<dev>
+  https://github.com/dclong/docker-python-nodejs:
+    - dclong/docker-python-nodejs<main>
+    - dclong/docker-python-nodejs<dev>
+  https://github.com/dclong/docker-jupyterlab:
+    - dclong/docker-jupyterlab<main>
+    - dclong/docker-jupyterlab<dev>
+  https://github.com/dclong/docker-jupyterhub:
+    - dclong/docker-jupyterhub<main>
+    - dclong/docker-jupyterhub<dev>
+  https://github.com/dclong/docker-jupyterhub-jdk:
+    - dclong/docker-jupyterhub-jdk<main>
+    - dclong/docker-jupyterhub-jdk<dev>
+  https://github.com/dclong/docker-jupyterhub-more:
+    - dclong/docker-jupyterhub-more<main>
+    - dclong/docker-jupyterhub-more<dev>
+  https://github.com/dclong/docker-vscode-server:
+    - dclong/docker-vscode-server<main>
+    - dclong/docker-vscode-server<dev>
+  https://github.com/dclong/docker-jupyterhub-ds:
+    - dclong/docker-jupyterhub-ds<main>
+    - dclong/docker-jupyterhub-ds<dev>
+  https://github.com/dclong/docker-gitpod:
+    - dclong/docker-gitpod<main>
+    - dclong/docker-gitpod<dev>
+  https://github.com/dclong/docker-jupyterhub-julia:
+    - dclong/docker-jupyterhub-julia<main>
+    - dclong/docker-jupyterhub-julia<dev>
+  https://github.com/dclong/docker-jupyterhub-cuda:
+    - dclong/docker-jupyterhub-cuda<main>
+    - dclong/docker-jupyterhub-cuda<dev>
+  https://github.com/dclong/docker-jupyterhub-cuda_b:
+    - dclong/docker-jupyterhub-cuda_b<main>
+    - dclong/docker-jupyterhub-cuda_b<dev>
+  https://github.com/dclong/docker-jupyterhub-pytorch:
+    - dclong/docker-jupyterhub-pytorch<main>
+    - dclong/docker-jupyterhub-pytorch<dev>
