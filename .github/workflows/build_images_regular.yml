@@ -1,9 +1,9 @@
-name: Build Docker Images Daily
+name: Build Docker Images Regularly
 on:
   schedule:
     - cron: '0 9 * * 5'
 jobs:
-  build_docker_images_daily:
+  build_docker_images_regularly:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -21,7 +21,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Build Docker Images
+      - name: Build Docker Images Regularly
         run: |
           df -lh
           ./build_images.py
