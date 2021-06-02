@@ -1,7 +1,7 @@
 name: Build Docker Images Daily
 on:
   schedule:
-    - cron: '0 9 * * *'
+    - cron: '0 9 * * 5'
 jobs:
   build_docker_images_daily:
     runs-on: ubuntu-latest
