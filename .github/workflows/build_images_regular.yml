@@ -27,6 +27,8 @@ jobs:
           ./build_images.py
           cat graph.yaml
           df -lh
+      - name: Set Environment Variable
+        run: echo "TODAY=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
