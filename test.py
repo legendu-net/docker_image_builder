@@ -19,4 +19,4 @@ branch_urls = {
 builder = dsutil.docker.DockerImageBuilder(branch_urls)
 #builder.build_images(push=False, remove=False)
 builder._build_graph()
-builder.save_graph(f"{datetime.date.today()}.yaml")
+builder.save_graph(f"graphs/{datetime.date.today()}.yaml")
