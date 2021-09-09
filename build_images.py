@@ -18,6 +18,9 @@ branch_urls = {
         #"https://github.com/dclong/docker-vscode-server.git",
         #"https://github.com/dclong/docker-rustpython.git",
     ],
+    "21.10": [
+        "https://github.com/dclong/docker-rust-utils.git",
+    ],
 }
 builder = dsutil.docker.DockerImageBuilder(branch_urls)
 builder.build_images(remove=True)
