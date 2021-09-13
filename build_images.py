@@ -7,7 +7,6 @@ repos = [
     "https://github.com/dclong/docker-gitpod.git",
     "https://github.com/dclong/docker-jupyterhub-julia.git",
     "https://github.com/dclong/docker-jupyterhub-pytorch.git",
-    "https://github.com/dclong/docker-kaniko.git",
     "https://github.com/dclong/docker-rust-utils.git",
     #"https://github.com/dclong/docker-rustpython.git",
     #"https://github.com/dclong/docker-pypy.git",
