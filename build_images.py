@@ -9,6 +9,7 @@ repos = [
     "https://github.com/dclong/docker-jupyterhub-pytorch.git",
     "https://github.com/dclong/docker-tensorboard.git",
     "https://github.com/dclong/docker-rust-utils.git",
+    "https://github.com/dclong/docker-evcxr_jupyter.git",
     #"https://github.com/dclong/docker-rustpython.git",
     #"https://github.com/dclong/docker-pypy.git",
 ]
