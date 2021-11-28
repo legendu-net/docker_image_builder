@@ -24,6 +24,9 @@ branch_urls = {
     "21.10": [
         #"https://github.com/dclong/docker-rust-utils.git",
     ],
+    "centos7.6": [
+        "https://github.com/dclong/docker-rust.git",
+    ],
 }
 builder = dsutil.docker.DockerImageBuilder(branch_urls)
 builder.build_images(remove=True)
