@@ -24,7 +24,7 @@ branch_urls = {
     "22.04": [
         "https://github.com/dclong/docker-vscode-server.git",
     ],
-    "centos7.6": [
+    "centos7": [
         "https://github.com/dclong/docker-rust.git",
     ],
 }
