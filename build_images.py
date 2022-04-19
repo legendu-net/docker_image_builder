@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-import dsutil.docker
+from dockeree import DockerImageBuilder
+
 
 repos = [
     "https://github.com/dclong/docker-python-portable.git",
@@ -28,6 +29,7 @@ branch_urls = {
         "https://github.com/dclong/docker-rust.git",
     ],
 }
-builder = dsutil.docker.DockerImageBuilder(branch_urls)
+builder = DockerImageBuilder(branch_urls)
 builder.build_images(remove=True)
 builder.save_graph()
+
