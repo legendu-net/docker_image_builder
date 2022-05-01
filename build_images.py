@@ -10,6 +10,7 @@ repos = [
     "https://github.com/dclong/docker-jupyterhub-pytorch.git",
     "https://github.com/dclong/docker-jupyterhub-sagemath.git",
     "https://github.com/dclong/docker-jupyterhub-kotlin.git",
+    "https://github.com/dclong/docker-jupyterhub-pelican.git",
     "https://github.com/dclong/docker-tensorboard.git",
     "https://github.com/dclong/docker-rust-utils.git",
     "https://github.com/dclong/docker-evcxr_jupyter.git",
