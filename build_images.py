@@ -6,7 +6,6 @@ repos = [
     "https://github.com/legendu-net/docker-python-portable.git",
     "https://github.com/legendu-net/docker-vscode-server.git",
     "https://github.com/legendu-net/docker-gitpod.git",
-    "https://github.com/legendu-net/docker-jupyterhub-julia.git",
     "https://github.com/legendu-net/docker-jupyterhub-pytorch.git",
     "https://github.com/legendu-net/docker-jupyterhub-sagemath.git",
     "https://github.com/legendu-net/docker-jupyterhub-kotlin.git",
@@ -17,6 +16,7 @@ repos = [
     "https://github.com/legendu-net/docker-evcxr_jupyter.git",
     #"https://github.com/legendu-net/docker-rustpython.git",
     #"https://github.com/legendu-net/docker-pypy.git",
+    #"https://github.com/legendu-net/docker-jupyterhub-julia.git",
 ]
 branch_urls = {
     "main": repos,
