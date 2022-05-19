@@ -26,9 +26,6 @@ branch_urls = {
         #"https://github.com/legendu-net/docker-vscode-server.git",
         #"https://github.com/legendu-net/docker-rustpython.git",
     ],
-    "22.04": [
-        "https://github.com/legendu-net/docker-vscode-server.git",
-    ],
     "centos7": [
         "https://github.com/legendu-net/docker-rust.git",
     ],
