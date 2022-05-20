@@ -5,6 +5,10 @@ on:
 jobs:
   build_docker_images_regularly:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+      contents: write
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python
