@@ -10,13 +10,13 @@ repos = [
     "https://github.com/legendu-net/docker-jupyterhub-sagemath.git",
     "https://github.com/legendu-net/docker-jupyterhub-kotlin.git",
     "https://github.com/legendu-net/docker-jupyterhub-golang.git",
-    "https://github.com/legendu-net/docker-jupyterhub-pelican.git",
     "https://github.com/legendu-net/docker-tensorboard.git",
     "https://github.com/legendu-net/docker-rust-utils.git",
     "https://github.com/legendu-net/docker-evcxr_jupyter.git",
     #"https://github.com/legendu-net/docker-rustpython.git",
     #"https://github.com/legendu-net/docker-pypy.git",
     #"https://github.com/legendu-net/docker-jupyterhub-julia.git",
+    #"https://github.com/legendu-net/docker-jupyterhub-pelican.git",
 ]
 branch_urls = {
     "main": repos,
