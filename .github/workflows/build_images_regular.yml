@@ -33,7 +33,7 @@ jobs:
         run: echo "TODAY=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: ${{ secrets.GITHUBACTIONS }}
           prerelease: false
           automatic_release_tag: build_${{ env.TODAY }}
           files: |
