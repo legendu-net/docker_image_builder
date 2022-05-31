@@ -13,6 +13,7 @@ repos = [
     "https://github.com/legendu-net/docker-tensorboard.git",
     "https://github.com/legendu-net/docker-rust-utils.git",
     "https://github.com/legendu-net/docker-evcxr_jupyter.git",
+    "https://github.com/legendu-net/docker-gophernotes.git",
     #"https://github.com/legendu-net/docker-rustpython.git",
     #"https://github.com/legendu-net/docker-pypy.git",
     #"https://github.com/legendu-net/docker-jupyterhub-julia.git",
