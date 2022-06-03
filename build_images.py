@@ -9,7 +9,7 @@ repos = [
     "https://github.com/legendu-net/docker-jupyterhub-pytorch.git",
     "https://github.com/legendu-net/docker-jupyterhub-sagemath.git",
     "https://github.com/legendu-net/docker-jupyterhub-kotlin.git",
-    "https://github.com/legendu-net/docker-jupyterhub-golang.git",
+    "https://github.com/legendu-net/docker-jupyterhub-go.git",
     "https://github.com/legendu-net/docker-tensorboard.git",
     "https://github.com/legendu-net/docker-rust-utils.git",
     "https://github.com/legendu-net/docker-evcxr_jupyter.git",
