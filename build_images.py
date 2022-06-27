@@ -9,7 +9,7 @@ repos = [
     "https://github.com/legendu-net/docker-jupyterhub-pytorch.git",
     "https://github.com/legendu-net/docker-jupyterhub-sagemath.git",
     "https://github.com/legendu-net/docker-jupyterhub-kotlin.git",
-    "https://github.com/legendu-net/docker-jupyterhub-go.git",
+    #"https://github.com/legendu-net/docker-jupyterhub-go.git",
     "https://github.com/legendu-net/docker-tensorboard.git",
     "https://github.com/legendu-net/docker-rust-utils.git",
     "https://github.com/legendu-net/docker-evcxr_jupyter.git",
@@ -17,7 +17,6 @@ repos = [
     #"https://github.com/legendu-net/docker-rustpython.git",
     #"https://github.com/legendu-net/docker-pypy.git",
     #"https://github.com/legendu-net/docker-jupyterhub-julia.git",
-    #"https://github.com/legendu-net/docker-jupyterhub-pelican.git",
 ]
 branch_urls = {
     "main": repos,
@@ -28,7 +27,7 @@ branch_urls = {
         #"https://github.com/legendu-net/docker-rustpython.git",
     ],
     "centos7": [
-        "https://github.com/legendu-net/docker-rust.git",
+        #"https://github.com/legendu-net/docker-rust.git",
     ],
 }
 builder = DockerImageBuilder(branch_urls)
