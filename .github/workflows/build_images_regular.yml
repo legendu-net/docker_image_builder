@@ -10,6 +10,9 @@ jobs:
       pull-requests: write
       contents: write
     steps:
+      - name: Free Disk Space
+        run: |
+          ./free_disk_space.sh
       - uses: actions/checkout@v2
       - name: Set up Python
         uses: actions/setup-python@v2
