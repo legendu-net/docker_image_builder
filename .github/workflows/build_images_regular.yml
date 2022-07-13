@@ -11,6 +11,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: refs/heads/main
       - name: Free Disk Space
         run: |
           ./free_disk_space.sh
