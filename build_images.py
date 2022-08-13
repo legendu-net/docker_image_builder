@@ -20,13 +20,8 @@ repos = [
 branch_urls = {
     "main": repos,
     "dev": repos,
-    "22.10": [
-        "https://github.com/legendu-net/docker-vscode-server.git",
-    ],
     "debian": [
-        #"https://github.com/legendu-net/docker-jupyterhub-ds.git",
-        #"https://github.com/legendu-net/docker-vscode-server.git",
-        #"https://github.com/legendu-net/docker-rustpython.git",
+        "https://github.com/legendu-net/docker-vscode-server.git",
     ],
 }
 builder = DockerImageBuilder(branch_urls)
