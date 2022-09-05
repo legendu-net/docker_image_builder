@@ -25,7 +25,7 @@ branch_urls = {
     ],
     "blog": [
         "https://github.com/legendu-net/docker-gitpod.git",
-    ]
+    ],
 }
 builder = DockerImageBuilder(branch_urls)
 builder.build_images(remove=True)
