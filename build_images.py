@@ -21,7 +21,7 @@ branch_urls = {
     "main": repos,
     "dev": repos,
     "22.10": [
-        #"https://github.com/legendu-net/docker-vscode-server.git",
+        "https://github.com/legendu-net/docker-vscode-server.git",
     ],
     "blog": [
         "https://github.com/legendu-net/docker-gitpod.git",
