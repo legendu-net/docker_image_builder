@@ -12,6 +12,7 @@ repos = [
     "https://github.com/legendu-net/docker-tensorboard.git",
     "https://github.com/legendu-net/docker-conda-build.git",
     "https://github.com/legendu-net/docker-jupyterhub-kotlin.git",
+    "https://github.com/legendu-net/docker-jupyterhub-ganymede.git",
     "https://github.com/legendu-net/docker-jupyterhub-sagemath.git",
     #"https://github.com/legendu-net/docker-rustpython.git",
     #"https://github.com/legendu-net/docker-pypy.git",
