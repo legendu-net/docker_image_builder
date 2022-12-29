@@ -24,6 +24,9 @@ branch_urls = {
     "22.10": [
         #"https://github.com/legendu-net/docker-vscode-server.git",
     ],
+    "alpine": [
+        "https://github.com/legendu-net/docker-rustpython.git",
+    ],
     "blog": [
         "https://github.com/legendu-net/docker-gitpod.git",
     ],
