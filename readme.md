@@ -7,6 +7,6 @@ Please refer to [DockerHub](https://hub.docker.com/u/dclong) for the built Docke
 
 Build images ad hoc (on push of tags).
 
-## [build_images_daily.yml](https://github.com/dclong/docker_image_builder/blob/main/.github/workflows/build_images_daily.yml)
+## [build_images_regular.yml](https://github.com/dclong/docker_image_builder/blob/main/.github/workflows/build_images_regular.yml)
 
 Build images dailly.
