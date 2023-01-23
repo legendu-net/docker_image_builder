@@ -22,6 +22,7 @@ branch_urls = {
     "main": repos,
     "dev": repos,
     "rust_nightly": [
+        "https://github.com/legendu-net/docker-rust-utils.git",
         "https://github.com/legendu-net/docker-vscode-server.git",
     ],
     "alpine": [
