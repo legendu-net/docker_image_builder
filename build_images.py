@@ -25,7 +25,7 @@ branch_urls = {
         "https://github.com/legendu-net/docker-rust-utils.git",
         "https://github.com/legendu-net/docker-vscode-server.git",
     ],
-    "perf": [
+    "cicd": [
         "https://github.com/legendu-net/docker-rust.git",
     ],
     "blog": [
