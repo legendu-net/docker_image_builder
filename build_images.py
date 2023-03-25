@@ -5,6 +5,7 @@ from dockeree import DockerImageBuilder
 repos = [
     "https://github.com/legendu-net/docker-gophernotes.git",
     "https://github.com/legendu-net/docker-rust-utils.git",
+    "https://github.com/legendu-net/docker-rust-cicd.git",
     "https://github.com/legendu-net/docker-python-portable.git",
     "https://github.com/legendu-net/docker-vscode-server.git",
     "https://github.com/legendu-net/docker-gitpod.git",
@@ -24,9 +25,6 @@ branch_urls = {
     "rust_nightly": [
         "https://github.com/legendu-net/docker-rust-utils.git",
         "https://github.com/legendu-net/docker-vscode-server.git",
-    ],
-    "cicd": [
-        "https://github.com/legendu-net/docker-rust.git",
     ],
     "blog": [
         "https://github.com/legendu-net/docker-gitpod.git",
