@@ -27,7 +27,7 @@ branch_urls = {
     ],
     "rust_nightly": [
         "https://github.com/legendu-net/docker-rust-utils.git",
-    ]
+    ],
 }
 builder = DockerImageBuilder(branch_urls)
 builder.build_images(remove=True)
