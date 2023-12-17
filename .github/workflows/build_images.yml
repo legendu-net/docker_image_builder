@@ -37,7 +37,7 @@ jobs:
         run: |
           df -lh
           docker ps
-          ./build_images.py --branch_urls ${{ github.event.inputs.branch_urls }}
+          ./build_images.py --branch_urls '${{ github.event.inputs.branch_urls }}'
           cat graph.yaml
           docker ps
           df -lh

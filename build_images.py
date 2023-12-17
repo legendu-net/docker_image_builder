@@ -50,11 +50,12 @@ def parse_args(args=None, namespace=None) -> Namespace:
 def main() -> None:
     """The main function of the script."""
     args = parse_args()
-    args.branch_urls = "\n".join(
+    args.branch_urls = "".join(
         line
         for line in args.branch_urls.strip().split("\n")
         if not line.strip().startswith("#")
     ).strip()
+    print(args.branch_urls)
     branch_urls = json.loads(args.branch_urls) if args.branch_urls else BRANCH_URLS
     builder = DockerImageBuilder(branch_urls)
     builder.build_images(remove=True)
