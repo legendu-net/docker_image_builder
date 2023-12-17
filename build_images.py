@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
+import json
 from dockeree import DockerImageBuilder
 
 
-repos = {
+REPOS = {
     "https://github.com/legendu-net/docker-gophernotes.git": "",
     "https://github.com/legendu-net/docker-rust-utils.git": "",
     "https://github.com/legendu-net/docker-rust-cicd.git": "",
@@ -19,9 +20,9 @@ repos = {
     # "https://github.com/legendu-net/docker-pypy.git": "",
     # "https://github.com/legendu-net/docker-jupyterhub-julia.git": "",
 }
-branch_urls = {
-    "main": repos,
-    "dev": repos,
+BRANCH_URLS = {
+    "main": REPOS,
+    "dev": REPOS,
     "blog": {
         # "https://github.com/legendu-net/docker-gitpod.git": "",
     },
@@ -32,6 +33,33 @@ branch_urls = {
         "https://github.com/dclong/docker-jupyterhub.git": "",
     },
 }
-builder = DockerImageBuilder(branch_urls)
-builder.build_images(remove=True)
-builder.save_graph()
+
+
+def parse_args(args=None, namespace=None) -> Namespace:
+    """Parse command-line arguments."""
+    parser = ArgumentParser(description="Build Docker images.")
+    parser.add_argument(
+        "--branch-urls",
+        dest="branch_urls",
+        required=True,
+        help="A JSON representation of dic[branch, dict[repo_git_url, base_image_name]].",
+    )
+    return parser.parse_args(args=args, namespace=namespace)
+
+
+def main() -> None:
+    """The main function of the script."""
+    args = parse_args()
+    args.branch_urls = "\n".join(
+        line
+        for line in args.branch_urls.strip().split("\n")
+        if not line.strip().startswith("#")
+    ).strip()
+    branch_urls = json.loads(args.branch_urls) if args.branch_urls else BRANCH_URLS
+    builder = DockerImageBuilder(branch_urls)
+    builder.build_images(remove=True)
+    builder.save_graph()
+
+
+if __name__ == "__main__":
+    main()
