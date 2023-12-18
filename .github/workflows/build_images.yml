@@ -5,12 +5,7 @@ on:
       branch_urls:
         description: 'A JSON string representing dict[branch, dict[repo_git_url, base_image_name]].'
         required: true
-        default: |
-        #{
-        #  "4.0": {
-        #    "https://github.com/legendu-net/docker-jupyterhub": "dclong/jupyterlab" 
-        #  } 
-        #}
+        default: #{"4.0": { "https://github.com/legendu-net/docker-jupyterhub": "dclong/jupyterlab" } }
 jobs:
   build_docker_images:
     runs-on: ubuntu-latest

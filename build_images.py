@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""Python script for building Docker images via GitHub Actions.
+"""
+from argparse import ArgumentParser, Namespace
 import json
 from dockeree import DockerImageBuilder
 
