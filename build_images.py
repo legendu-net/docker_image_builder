@@ -2,7 +2,6 @@
 """Python script for building Docker images via GitHub Actions.
 """
 from argparse import ArgumentParser, Namespace
-import json
 from dockeree import DockerImageBuilder
 
 
@@ -42,10 +41,22 @@ def parse_args(args=None, namespace=None) -> Namespace:
     """Parse command-line arguments."""
     parser = ArgumentParser(description="Build Docker images.")
     parser.add_argument(
-        "--branch-urls",
-        dest="branch_urls",
+        "--branch",
+        dest="branch",
         required=True,
-        help="A JSON representation of dic[branch, dict[repo_git_url, base_image_name]].",
+        help="The GitHub branch of repositories to build.",
+    )
+    parser.add_argument(
+        "--repo",
+        dest="repo",
+        required=True,
+        help="The leaf repository to build",
+    )
+    parser.add_argument(
+        "--base",
+        dest="base",
+        required=True,
+        help="The name of the base/root Docker image in dependency resolving.",
     )
     return parser.parse_args(args=args, namespace=namespace)
 
@@ -53,13 +64,11 @@ def parse_args(args=None, namespace=None) -> Namespace:
 def main() -> None:
     """The main function of the script."""
     args = parse_args()
-    args.branch_urls = "".join(
-        line
-        for line in args.branch_urls.strip().split("\n")
-        if not line.strip().startswith("#")
-    ).strip()
-    print(args.branch_urls)
-    branch_urls = json.loads(args.branch_urls) if args.branch_urls else BRANCH_URLS
+    branch_urls = BRANCH_URLS
+    if args.repo:
+        if not args.branch:
+            args.branch = "dev"
+        branch_urls = {args.branch: {args.repo: args.base}}
     builder = DockerImageBuilder(branch_urls)
     builder.build_images(remove=True)
     builder.save_graph()

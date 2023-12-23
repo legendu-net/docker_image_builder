@@ -2,10 +2,16 @@ name: Build Docker Images
 on:
   workflow_dispatch:
     inputs:
-      branch_urls:
-        description: 'A JSON string representing dict[branch, dict[repo_git_url, base_image_name]].'
-        required: true
-        default: '#{"4.0": { "https://github.com/legendu-net/docker-jupyterhub": "dclong/jupyterlab" } }'
+      branch:
+        description: 'The GitHub branch of repositories to build.'
+        required: false
+        default: dev
+      repo:
+        description: 'The leaf repository to build.'
+        required: false
+      base:
+        description: 'The name of the base/root Docker image in dependency resolving.'
+        required: false
 jobs:
   build_docker_images:
     runs-on: ubuntu-latest
@@ -32,7 +38,7 @@ jobs:
         run: |
           df -lh
           docker ps
-          ./build_images.py --branch_urls '${{ github.event.inputs.branch_urls }}'
+          ./build_images.py --branch ${{ github.event.inputs.branch }} --repo ${{ github.event.inputs.repo }} --base ${{ github.event.inputs.base }}
           cat graph.yaml
           docker ps
           df -lh
