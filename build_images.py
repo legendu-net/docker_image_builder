@@ -53,8 +53,8 @@ def parse_args(args=None, namespace=None) -> Namespace:
         help="The leaf repository to build",
     )
     parser.add_argument(
-        "--base",
-        dest="base",
+        "--root-image-name",
+        dest="root_image_name",
         required=True,
         help="The name of the base/root Docker image in dependency resolving.",
     )
@@ -68,7 +68,7 @@ def main() -> None:
     if args.repo:
         if not args.branch:
             args.branch = "dev"
-        branch_urls = {args.branch: {args.repo: args.base}}
+        branch_urls = {args.branch: {args.repo: args.root_image_name}}
     builder = DockerImageBuilder(branch_urls)
     builder.build_images(remove=True)
     builder.save_graph()
