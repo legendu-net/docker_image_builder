@@ -9,6 +9,7 @@ on:
       repo:
         description: 'The leaf repository to build.'
         required: false
+        default: https://github.com/legendu-net/docker-jupyterhub
       base:
         description: 'The name of the base/root Docker image in dependency resolving.'
         required: false
