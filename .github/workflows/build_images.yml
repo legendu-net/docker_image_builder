@@ -10,8 +10,8 @@ on:
         description: 'The leaf repository to build.'
         required: false
         default: https://github.com/legendu-net/docker-jupyterhub
-      base:
-        description: 'The name of the base/root Docker image in dependency resolving.'
+      root_image_name:
+        description: 'The name of the root Docker image in dependency resolving.'
         required: false
 jobs:
   build_docker_images:
@@ -39,7 +39,7 @@ jobs:
         run: |
           df -lh
           docker ps
-          ./build_images.py --branch ${{ github.event.inputs.branch }} --repo ${{ github.event.inputs.repo }} --base ${{ github.event.inputs.base }}
+          ./build_images.py --branch ${{ github.event.inputs.branch }} --repo ${{ github.event.inputs.repo }} --root-image-name ${{ github.event.inputs.root_image_name }}
           cat graph.yaml
           docker ps
           df -lh
