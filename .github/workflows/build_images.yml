@@ -39,7 +39,7 @@ jobs:
         run: |
           df -lh
           docker ps
-          ./build_images.py --branch ${{ github.event.inputs.branch }} --repo ${{ github.event.inputs.repo }} --root-image-name ${{ github.event.inputs.root_image_name }}
+          ./build_images.py --branch '${{ github.event.inputs.branch }}' --repo '${{ github.event.inputs.repo }}' --root-image-name '${{ github.event.inputs.root_image_name }}'
           cat graph.yaml
           docker ps
           df -lh
