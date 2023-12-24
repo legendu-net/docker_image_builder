@@ -6,33 +6,30 @@ from dockeree import DockerImageBuilder
 
 
 REPOS = {
-    "https://github.com/legendu-net/docker-gophernotes.git": "",
-    "https://github.com/legendu-net/docker-rust-utils.git": "",
-    "https://github.com/legendu-net/docker-rust-cicd.git": "",
-    "https://github.com/legendu-net/docker-python-portable.git": "",
-    "https://github.com/legendu-net/docker-vscode-server.git": "",
-    "https://github.com/legendu-net/docker-gitpod.git": "",
-    "https://github.com/legendu-net/docker-jupyterhub-pytorch.git": "",
-    "https://github.com/legendu-net/docker-tensorboard.git": "",
-    # "https://github.com/legendu-net/docker-conda-build.git": "",
-    "https://github.com/legendu-net/docker-jupyterhub-kotlin.git": "",
-    "https://github.com/legendu-net/docker-jupyterhub-ganymede.git": "",
-    "https://github.com/legendu-net/docker-jupyterhub-sagemath.git": "",
-    "https://github.com/legendu-net/docker-rustpython.git": "",
-    # "https://github.com/legendu-net/docker-pypy.git": "",
-    # "https://github.com/legendu-net/docker-jupyterhub-julia.git": "",
+    "https://github.com/legendu-net/docker-gophernotes": "",
+    "https://github.com/legendu-net/docker-rust-utils": "",
+    "https://github.com/legendu-net/docker-rust-cicd": "",
+    "https://github.com/legendu-net/docker-python-portable": "",
+    "https://github.com/legendu-net/docker-vscode-server": "",
+    "https://github.com/legendu-net/docker-gitpod": "",
+    "https://github.com/legendu-net/docker-jupyterhub-pytorch": "",
+    "https://github.com/legendu-net/docker-tensorboard": "",
+    # "https://github.com/legendu-net/docker-conda-build": "",
+    "https://github.com/legendu-net/docker-jupyterhub-kotlin": "",
+    "https://github.com/legendu-net/docker-jupyterhub-ganymede": "",
+    "https://github.com/legendu-net/docker-jupyterhub-sagemath": "",
+    "https://github.com/legendu-net/docker-rustpython": "",
+    # "https://github.com/legendu-net/docker-pypy": "",
+    # "https://github.com/legendu-net/docker-jupyterhub-julia": "",
 }
 BRANCH_URLS = {
     "main": REPOS,
     "dev": REPOS,
-    "blog": {
-        # "https://github.com/legendu-net/docker-gitpod.git": "",
-    },
     "rust_nightly": {
-        # "https://github.com/legendu-net/docker-rust-utils.git": "",
+        # "https://github.com/legendu-net/docker-rust-utils": "",
     },
     "4.0": {
-        "https://github.com/dclong/docker-jupyterhub.git": "",
+        "https://github.com/legendu-net/docker-jupyterhub": "",
     },
 }
 
