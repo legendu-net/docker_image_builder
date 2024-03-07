@@ -17,7 +17,7 @@ REPOS = {
     # "https://github.com/legendu-net/docker-conda-build": "",
     "https://github.com/legendu-net/docker-jupyterhub-kotlin": "",
     "https://github.com/legendu-net/docker-jupyterhub-ganymede": "",
-    "https://github.com/legendu-net/docker-jupyterhub-sagemath": "",
+    # "https://github.com/legendu-net/docker-jupyterhub-sagemath": "",
     "https://github.com/legendu-net/docker-rustpython": "",
     # "https://github.com/legendu-net/docker-pypy": "",
     # "https://github.com/legendu-net/docker-jupyterhub-julia": "",
