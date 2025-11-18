@@ -1,4 +1,10 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run
+# /// script
+# requires-python = "==3.13"
+# dependencies = [
+#     "dockeree",
+# ]
+# ///
 """Python script for building Docker images via GitHub Actions.
 """
 from argparse import ArgumentParser, Namespace
@@ -11,7 +17,7 @@ REPOS = {
     "https://github.com/legendu-net/docker-rust-cicd": "",
     "https://github.com/legendu-net/docker-python-portable": "",
     "https://github.com/legendu-net/docker-vscode-server": "",
-    "https://github.com/legendu-net/docker-gitpod": "",
+    # "https://github.com/legendu-net/docker-gitpod": "",
     "https://github.com/legendu-net/docker-jupyterhub-pytorch": "",
     "https://github.com/legendu-net/docker-tensorboard": "",
     # "https://github.com/legendu-net/docker-conda-build": "",
@@ -73,3 +79,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
