@@ -18,6 +18,7 @@ REPOS = {
     "https://github.com/legendu-net/docker-python-portable": "",
     "https://github.com/legendu-net/docker-vscode-server": "",
     # "https://github.com/legendu-net/docker-gitpod": "",
+    "https://github.com/legendu-net/docker-jupyterhub-ds": "",
     "https://github.com/legendu-net/docker-jupyterhub-pytorch": "",
     "https://github.com/legendu-net/docker-tensorboard": "",
     # "https://github.com/legendu-net/docker-conda-build": "",
