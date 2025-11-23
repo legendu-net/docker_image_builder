@@ -38,7 +38,10 @@ jobs:
           docker images
       - name: Build Docker Images
         run: |
-          ./build_images.py --branch '${{ github.event.inputs.branch }}' --repo '${{ github.event.inputs.repo }}' --root-image-name '${{ github.event.inputs.root_image_name }}'
+          ./build_images.py \
+            --branch '${{ github.event.inputs.branch }}' \
+            --repo '${{ github.event.inputs.repo }}' \
+            --root-image-name '${{ github.event.inputs.root_image_name }}'
       - name: Show Building Graph
         run: |
           cat graph.yaml

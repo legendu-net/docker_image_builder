@@ -61,6 +61,12 @@ def parse_args(args=None, namespace=None) -> Namespace:
         required=True,
         help="The name of the base/root Docker image in dependency resolving.",
     )
+    parser.add_argument(
+        "--remove-images",
+        dest="remove_images",
+        action="store_true",
+        help="Remove a Docker image when it's not needed (for building other images).",
+    )
     return parser.parse_args(args=args, namespace=namespace)
 
 
@@ -73,7 +79,7 @@ def main() -> None:
             args.branch = "dev"
         branch_urls = {args.branch: {args.repo: args.root_image_name}}
     builder = DockerImageBuilder(branch_urls)
-    builder.build_images(remove=True)
+    builder.build_images(remove=args.remove_images)
     builder.save_graph()
 
 

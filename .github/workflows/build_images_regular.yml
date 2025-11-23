@@ -24,7 +24,7 @@ jobs:
       - name: Build Docker Images Regularly
         run: |
           df -lh
-          ./build_images.py --branch "" --repo "" --root-image-name ""
+          ./build_images.py --branch "" --repo "" --root-image-name "" --remove-images
           cat graph.yaml
           df -lh
       - name: Set Environment Variable
