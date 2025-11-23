@@ -5,8 +5,8 @@
 #     "dockeree",
 # ]
 # ///
-"""Python script for building Docker images via GitHub Actions.
-"""
+"""Python script for building Docker images via GitHub Actions."""
+
 from argparse import ArgumentParser, Namespace
 from dockeree import DockerImageBuilder
 
@@ -79,4 +79,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

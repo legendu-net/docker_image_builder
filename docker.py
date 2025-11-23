@@ -5,7 +5,7 @@ import subprocess as sp
 
 
 def config_data_root(data_root: str) -> dict[str, str]:
-    Path(data_root).mkdir(parents=True, exists_ok=True)
+    Path(data_root).mkdir(parents=True, exist_ok=True)
     settings = {}
     path = Path("/etc/docker/daemon.json")
     if path.is_file():
@@ -18,13 +18,12 @@ def config_data_root(data_root: str) -> dict[str, str]:
 
 
 def store_docker_on_mnt():
-    sp.run(cmd="systemctl stop docker", shell=True, check=True)
+    sp.run("systemctl stop docker", shell=True, check=True)
     settings = config_data_root("/mnt/docker")
     print(settings)
-    sp.run(cmd="systemctl start docker", shell=True, check=True)
-    sp.run(cmd="docker info", shell=True, check=True)
+    sp.run("systemctl start docker", shell=True, check=True)
+    sp.run("docker info", shell=True, check=True)
 
 
 if __name__ == "__main__":
     store_docker_on_mnt()
-
