@@ -26,7 +26,7 @@ jobs:
       #    ./free_disk_space.sh
       - name: Store Docker Images on /mnt/docker
         run: |
-          ./docker.py
+          sudo ./docker.py
       - name: Login to DockerHub
         uses: docker/login-action@v3
         with:
