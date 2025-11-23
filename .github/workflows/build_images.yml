@@ -33,7 +33,7 @@ jobs:
       - name: Store Docker Images on /mnt/docker
         run: |
           sudo ./config_docker.py
-      - name: Show Docker Images
+      - name: Show Docker Images Before Building
         run: |
           docker images
       - name: Build Docker Images
@@ -42,7 +42,7 @@ jobs:
             --branch '${{ github.event.inputs.branch }}' \
             --repo '${{ github.event.inputs.repo }}' \
             --root-image-name '${{ github.event.inputs.root_image_name }}'
-      - name: Show Building Graph
+      - name: Show Building Graph After Building
         run: |
           cat graph.yaml
       - name: Show Docker Images
