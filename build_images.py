@@ -35,9 +35,6 @@ BRANCH_URLS = {
     "rust_nightly": {
         # "https://github.com/legendu-net/docker-rust-utils": "",
     },
-    "4.0": {
-        "https://github.com/legendu-net/docker-jupyterhub": "",
-    },
 }
 
 
