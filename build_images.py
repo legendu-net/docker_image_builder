@@ -32,11 +32,9 @@ REPOS = {
 BRANCH_URLS = {
     "main": REPOS,
     "dev": REPOS,
+    #"26.04": REPOS,
     "rust_nightly": {
         # "https://github.com/legendu-net/docker-rust-utils": "",
-    },
-    "4.0": {
-        "https://github.com/legendu-net/docker-jupyterhub": "",
     },
 }
 

@@ -4,29 +4,39 @@ on:
     - cron: '0 9 13 * *'
 jobs:
   build_docker_images_regularly:
-    runs-on: [self-hosted]
+    runs-on: ubuntu-latest
     permissions:
       issues: write
       pull-requests: write
       contents: write
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
         with:
           ref: refs/heads/main
-      - name: Free Disk Space
-        run: |
-          ./free_disk_space.sh
       - name: Login to DockerHub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Build Docker Images Regularly
+      - name: Install uv
         run: |
-          df -lh
-          ./build_images.py --branch "" --repo "" --root-image-name "" --remove-images
+          curl -LsSf https://astral.sh/uv/install.sh | sudo env UV_INSTALL_DIR="/usr/local/bin" sh
+          which uv
+      - name: Store Docker Images on /mnt/docker
+        run: |
+          sudo ./config_docker.py
+      - name: Show Docker Images Before Building
+        run: |
+          docker images
+      - name: Build Docker Images
+        run: |
+          ./build_images.py --branch "" --repo "" --root-image-name ""
+      - name: Show Building Graph
+        run: |
           cat graph.yaml
-          df -lh
+      - name: Show Docker Images After Building
+        run: |
+          docker images
       - name: Set Environment Variable
         run: echo "TODAY=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
       - uses: "marvinpinto/action-automatic-releases@latest"
