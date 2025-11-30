@@ -12,7 +12,6 @@ from dockeree import DockerImageBuilder
 
 
 REPOS = {
-    "https://github.com/legendu-net/docker-gophernotes": "",
     "https://github.com/legendu-net/docker-rust-utils": "",
     "https://github.com/legendu-net/docker-rust-cicd": "",
     "https://github.com/legendu-net/docker-python-portable": "",
@@ -21,13 +20,10 @@ REPOS = {
     "https://github.com/legendu-net/docker-jupyterhub-ds": "",
     "https://github.com/legendu-net/docker-jupyterhub-pytorch": "",
     "https://github.com/legendu-net/docker-tensorboard": "",
-    # "https://github.com/legendu-net/docker-conda-build": "",
     "https://github.com/legendu-net/docker-jupyterhub-kotlin": "",
     "https://github.com/legendu-net/docker-jupyterhub-ganymede": "",
     # "https://github.com/legendu-net/docker-jupyterhub-sagemath": "",
     "https://github.com/legendu-net/docker-rustpython": "",
-    # "https://github.com/legendu-net/docker-pypy": "",
-    # "https://github.com/legendu-net/docker-jupyterhub-julia": "",
 }
 BRANCH_URLS = {
     "main": REPOS,
